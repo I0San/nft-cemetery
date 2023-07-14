@@ -1,0 +1,170 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_nftOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_nftAddress",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_nftId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_inscription",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_burried",
+                "type": "uint256"
+            }
+        ],
+        "name": "nftBurried",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "BURN_ADDRESS",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "inscription",
+                "type": "string"
+            }
+        ],
+        "name": "burryMyNFT",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "page",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "pageSize",
+                "type": "uint256"
+            }
+        ],
+        "name": "getGraveyard",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftOwner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "nftContract",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "nftId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "inscription",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "burried",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct NFTCemetery.Grave[]",
+                "name": "",
+                "type": "tuple[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "graveyard",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "nftOwner",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "nftContract",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "nftId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "inscription",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "burried",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
