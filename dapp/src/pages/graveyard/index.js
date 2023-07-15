@@ -25,12 +25,12 @@ export default function PageGraveyard() {
         <div className="graveyard-container">
           
           <h1>Graveyard</h1>
-          <p>Graves: {graves[1]?.toString()}</p>
+          <p>Graves: {graves?.length > 0 && graves[1]?.toString()}</p>
 
           <div className="graves">
             {getGravesLoading && <p>Loading...</p>}
             {getGravesError && <p>Error: {getGravesError}</p>}
-            {graves[0]?.map((grave, x) => (
+            {graves?.length > 0 && graves[0]?.map((grave, x) => (
               <div key={x} className="grave">
                 <div className="graveTitle">{grave?.inscription}</div>
                 <a href="" className="grave-info"><small>TokenId: {grave?.nftId?.toString()}</small></a><br />
