@@ -1,7 +1,7 @@
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { WagmiConfig } from "wagmi"
-import { ConnectKitProvider } from "connectkit"
 import { config } from './components/web3/wagmi'
+import { ConnectKitCustomProvider } from "./components/web3/connectKitCustomProvider"
 import MainLayout from "./components/@layout"
 import PageHome from "./pages/home"
 import PageGraveyard from "./pages/graveyard"
@@ -11,7 +11,7 @@ import PageFuneral from "./pages/funeral"
 function App() {
   return (
     <WagmiConfig config={config}>
-      <ConnectKitProvider>
+      <ConnectKitCustomProvider>
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<PageHome />} />
@@ -20,7 +20,7 @@ function App() {
             {/* <Route path="*" element={<NoMatch />} /> */}
           </Route>
         </Routes>
-      </ConnectKitProvider>
+      </ConnectKitCustomProvider>
     </WagmiConfig>
   )
 }

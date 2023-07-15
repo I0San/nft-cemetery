@@ -10,3 +10,10 @@ The ReactJS dApp is a simple interface to interact with the contract. It allows 
 
 ## WARNING
 The NFTs are burned and gone forever. You will never get them back.
+
+### Contribute code
+If you want to contribute code, get in touch with me on iosan@protonmail.com.
+
+### Donate
+EVM Address 0x386A5a8b33234B5eb22dAeE45C1693c8591cB4a2  
+BTC Address bc1qszdxp6dzrrzv6h0mnk0093k48h07j4rhvsjl9u

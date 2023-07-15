@@ -1,0 +1,23 @@
+footer {
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 24px;
+}
+
+.footerItems {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerItems > a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,12 +1,80 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-animation: flicker 2.5s infinite alternate;
+  -moz-animation: flicker 2.5s infinite alternate;
+  animation: flicker 2.5s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #0fa,
+      0 0 35px #0fa,
+      0 0 55px #0fa,
+      0 0 77px #0fa,
+      0 0 99px #0fa;
+  }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }
 
 .menuItems {
+  display: none;
+  align-items: center;
+  gap: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+  text-shadow: #ffffff 0px 0px 4px;
+}
+
+.menuItems > a {
+  color: white;
+  text-decoration: none;
+}
+
+.menuItems .linkActiveH {
+  color: #fff3bf;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+.menuItems .linkActiveF {
+  color: #37bbd1;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+.menuItems .linkActiveG {
+  color: #fcaeaa;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+
+@media (min-width: 640px) {
+
+}
+@media (min-width: 768px) {
+  nav {
+    padding: 14px 24px;
+  }
+  .menuItems {
     display: flex;
-    align-items: center;
-    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1280px) {
+
 }

@@ -9,3 +9,32 @@ The contract creates a new Grave with the Incription (limited to 50 characters),
 The repo also includes MockNFT contract for testing purposes.
 
 
+## Install dependencies
+
+```bash
+yarn install
+```
+
+## Compile contracts
+
+```bash
+npx hardhat compile
+```
+
+## Run tests
+
+```bash
+npx hardhat test
+```
+
+## Development
+
+```bash
+npx hardhat node
+```
+
+## Deploy contracts
+
+```bash
+npx hardhat run scripts/deploy.js --network <network>
+```

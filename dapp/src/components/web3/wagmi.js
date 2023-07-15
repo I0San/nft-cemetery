@@ -13,6 +13,7 @@ export const config = createConfig(
         ? polygonMumbai
         : polygon],
     autoConnect: true,
+    walletConnectProjectId: `${process.env.REACT_APP_WALLETCONNECT_PROJECT_ID}`,
     // Optional
     appDescription: "NFT Cemetery | Put your NFT's to final rest.",
     // appUrl: "https://family.co", // app's url

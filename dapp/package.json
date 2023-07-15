@@ -5,8 +5,10 @@
   "dependencies": {
     "connectkit": "^1.4.0",
     "env-cmd": "^10.1.0",
+    "framer-motion": "^10.12.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "use-debounce": "^9.0.4",

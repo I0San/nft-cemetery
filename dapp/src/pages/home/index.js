@@ -1,19 +1,14 @@
-import React, { useEffect, useRef } from 'react'
-import { useGetGraveyard } from '../../hooks/useGetGraves'
+import styles from './index.module.css'
+import useBodyClass from '../../hooks/useBodyClass'
+import { Link } from "react-router-dom"
+import { PageTransition } from '../../components/@layout/pageTransition'
+
 
 export default function PageHome() {
-  const shouldFetch = useRef(true)
-  const { getGraves, getGravesLoading, getGravesError} = useGetGraveyard()
-
-  useEffect(() => {
-    if (shouldFetch.current) {
-      shouldFetch.current = false
-      getGraves(1, 5)
-    }
-  }, [])
+  useBodyClass('home-bg')
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <PageTransition>
+      <Link to="/funeral" className={styles.glowingCircle}></Link>
+    </PageTransition>
   )
 }

@@ -1,0 +1,64 @@
+.graveyard-wrapper {
+  /* display: flex;
+  justify-content: center; */
+  padding: 80px 15px;
+}
+
+.graveyard-container {
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+  /* border-radius: 20px;
+  padding: 20px 40px;
+  color: white;
+  min-width: 333px; */
+}
+
+.graveyard-container > h1 {
+  margin-bottom: 0;
+}
+
+.graveyard-container > p {
+    color: white;
+  }
+
+.graves {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 992px) {
+  .graves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 1280px) {
+  .graves {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grave {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.graveTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.grave-info {
+  color: white;
+  text-decoration: none;
+}
+
+.grave-info:hover {
+  color: lightblue;
+}
