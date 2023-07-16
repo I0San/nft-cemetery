@@ -10,7 +10,7 @@ export const useGetGraveyard = () => {
   const [error, setError] = useState()
   const [loading, setLoading] = useState(false)
 
-  const getGraves = async (page = 1, pageSize = 10) => {
+  const getGraves = async (page = 1, pageSize = 9) => {
     try {
       setLoading(true)
       const contract = getContract({
@@ -24,7 +24,7 @@ export const useGetGraveyard = () => {
       return data
     } catch (error) {
       setError(error)
-      return undefined
+      return []
     }
   }
 

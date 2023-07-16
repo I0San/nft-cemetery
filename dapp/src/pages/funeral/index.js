@@ -64,7 +64,7 @@ export default function PageFuneral() {
                   placeholder="Inscription (ex. R.I.P. NFT)"
                   value={inscription}
                   className="input-txt"
-                  maxLength="50"
+                  maxLength="20"
                   required
                 />
 

@@ -1,60 +1,77 @@
 .funeral-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .funeral-container {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    border-radius: 20px;
-    padding: 20px 40px;
-    color: white;
-    min-width: 333px;
-    text-align: center;
-    margin-bottom: 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  border-radius: 20px;
+  padding: 20px 50px;
+  color: white;
+  /* min-width: 100%; */
+  text-align: center;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .formBurry {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
 }
 
 .input-txt {
-    padding: 8px;
-    font-size: 18px;
-    border-width: 1px;
-    border-color: #CCCCCC;
-    background-color: #FFFFFF;
-    color: #000000;
-    border-style: solid;
-    border-radius: 9px;
-    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
-    text-shadow: 0px 0px 1px rgba(66,66,66,.75);
-    text-align: center;
-    opacity: 0.8;
-  }
-  .input-txt:focus {
-    outline:none;
-    opacity: 0.95;
-  }
+  padding: 8px;
+  font-size: 18px;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 9px;
+  box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+  text-shadow: 0px 0px 1px rgba(66, 66, 66, 0.75);
+  text-align: center;
+  opacity: 0.8;
+}
+.input-txt:focus {
+  outline: none;
+  opacity: 0.95;
+}
 
-  .btnBury {
-    background: #29c1d9;
-    border: none;
-    border-radius: 9px;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 20px 20px 20px 20px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 10px;
-    opacity: 0.88;
+.btnBury {
+  background: #29c1d9;
+  border: none;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+  opacity: 0.88;
+}
+
+.btnBury:hover {
+  background: #27b6cc;
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+  .funeral-wrapper {
+    align-items: flex-end;
   }
-  
-  .btnBury:hover {
-    background: #27b6cc;
-    text-decoration: none;
-    opacity: 0.95;
+  .funeral-container {
+    min-width: 333px;
   }
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+}

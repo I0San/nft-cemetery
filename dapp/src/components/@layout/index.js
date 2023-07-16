@@ -1,9 +1,32 @@
+import { useEffect, useRef } from "react"
 import { Outlet } from "react-router-dom"
 import { Toaster } from "react-hot-toast"
+import { useGraveyardStore } from '../../store'
+import { useGetGraveyard } from '../../hooks/useGetGraves'
 import Header from "./header"
 import Footer from "./footer"
 
+
 export default function MainLayout() {
+    const shouldFetch = useRef(true)
+    const setGraves = useGraveyardStore((state) => state.setGraves)
+    const setTotalGraves = useGraveyardStore((state) => state.setTotalGraves)
+    const setPage = useGraveyardStore((state) => state.setPage)
+    const { getGraves, getGravesLoading, getGravesError } = useGetGraveyard()
+
+    useEffect(() => {
+        if (shouldFetch.current) {
+            shouldFetch.current = false
+            getGraves().then((data) => {
+                if (data) {
+                    setTotalGraves(parseInt(data[1].toString()))
+                    setGraves(data[0])
+                    setPage(2)
+                }
+            })
+        }
+    }, [])
+
     return (
         <>
             <Header />
