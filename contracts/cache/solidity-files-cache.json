@@ -441,8 +441,8 @@
       ]
     },
     "C:\\Users\\X8Developer1\\Documents\\GIT\\OPEN_SOURCE\\nft-cemetery\\contracts\\contracts\\NFTCemetery.sol": {
-      "lastModificationDate": 1689503076514,
-      "contentHash": "decb543ded06b8ea9eeae509434a62bf",
+      "lastModificationDate": 1689530837656,
+      "contentHash": "4d0b0f8b36321b80c9d5982fa39da6c7",
       "sourceName": "contracts/NFTCemetery.sol",
       "solcConfig": {
         "version": "0.8.18",

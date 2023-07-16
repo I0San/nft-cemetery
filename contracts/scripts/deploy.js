@@ -11,11 +11,42 @@ async function main() {
 
     // Mint MockNFTs
     console.log("Minting MockNFTs...");
-    await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
+    await mockNFT.mint("0x28DD2379A5e5d058D2d4D3bcF190eA023971e83D");
     console.log("Done.");
 }
 
