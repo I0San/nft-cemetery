@@ -19,7 +19,7 @@ contract NFTCemetery {
     event nftBurried(address indexed _nftOwner, address indexed _nftAddress, uint256 _nftId, string _inscription, uint _burried);
 
     function burryMyNFT(address nftAddress, uint256 tokenId, string memory inscription ) public {
-        require(bytes(inscription).length <=50, "Inscription is limited to 50 characters.");
+        require(bytes(inscription).length <=20, "Inscription is limited to 20 characters.");
         
         IERC721(nftAddress).safeTransferFrom(msg.sender, BURN_ADDRESS, tokenId);
 

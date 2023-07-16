@@ -1,12 +1,18 @@
-import { useState } from 'react'
-import { Link } from "react-router-dom"
 import './index.css'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom"
 
 const evmAddress = "0x386A5a8b33234B5eb22dAeE45C1693c8591cB4a2"
 const btcAddress = "bc1qszdxp6dzrrzv6h0mnk0093k48h07j4rhvsjl9u"
 
 export default function Footer() {
+    let location = useLocation()
     const [showAddress, setShowAddress] = useState(0)
+    const [active, setActive] = useState("/")
+
+    useEffect(() => {
+        setActive(location.pathname)
+    }, [location])
 
     const handleDonate = (e) => {
         e.preventDefault()
@@ -47,6 +53,14 @@ export default function Footer() {
                                     : "Copied!"}
                     </Link>
                 </div>
+
+                {/* MOBILE ITEMS TEMPORARY */}
+                <div className="mobileMenuItems">
+                    <Link to="/" className={active == "/" ? "linkActiveH" : ""}>Home</Link>
+                    <Link to="/funeral" className={active == "/funeral" ? "linkActiveF" : ""}>Funeral</Link>
+                    <Link to="/graveyard" className={active == "/graveyard" ? "linkActiveG" : ""}>Graveyard</Link>
+                </div>
+
             </div>
         </footer>
     )

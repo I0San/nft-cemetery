@@ -1,23 +1,66 @@
 footer {
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9998;
 }
 
 .footerWrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 24px;
 }
 
 .footerItems {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: none;
 }
 
 .footerItems > a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+.mobileMenuItems {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-left: 5px;
+  font-weight: bold;
+  text-shadow: #ffffff 0px 0px 4px;
+}
+
+.mobileMenuItems > a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobileMenuItems .linkActiveH {
+  color: #fff3bf;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+.mobileMenuItems .linkActiveF {
+  color: #37bbd1;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+.mobileMenuItems .linkActiveG {
+  color: #fcaeaa;
+  text-shadow: #ffffff 0px 0px 8px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    background: transparent;
+  }
+  .footerItems {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .mobileMenuItems {
+    display: none;
+  }
 }
