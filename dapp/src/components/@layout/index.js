@@ -18,7 +18,7 @@ export default function MainLayout() {
         if (shouldFetch.current) {
             shouldFetch.current = false
             getGraves().then((data) => {
-                if (data) {
+                if (data && data[1]) {
                     setTotalGraves(parseInt(data[1].toString()))
                     setGraves(data[0])
                     setPage(2)
