@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDebounce } from 'use-debounce'
 import { useAccount } from 'wagmi'
 import { toast } from 'react-hot-toast'
+import { isAddress } from 'viem'
 import { useApprove } from '../../hooks/useApprove'
 import { useBuryMyNFT } from '../../hooks/useBuryMyNFT'
 import { PageTransition } from '../../components/@layout/pageTransition'
@@ -23,12 +24,26 @@ export default function PageFuneral() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (await approve(dbTokenAddress, dbTokenId)) {
-      if (await bury(dbTokenAddress, dbTokenId, dbInscription)) {
-        toast.success('You\'ve successfully buried your NFT.')
+    if (approving || burying) return
+    if (!isConnected) return toast.error('Connect your wallet first.')
+    if (!dbInscription || !dbTokenId || !dbTokenAddress) return toast.error('Please fill all the fields.')
+    if (dbInscription.length > 20) return toast.error('Inscription must be less than 20 characters.')
+    
+    let tkId = 0
+    try {
+      tkId = parseInt(dbTokenId)
+    } catch (error) {
+      toast.error('Token ID must be a number.')
+    }
+
+    if (tkId !== NaN && isAddress(dbTokenAddress)) {
+      if (await approve(dbTokenAddress, tkId)) {
+        if (await bury(dbTokenAddress, tkId, dbInscription)) {
+          toast.success('You\'ve successfully buried your NFT.')
+        }
+      } else {
+        toast.error('You declined the transaction.')
       }
-    } else {
-      toast.error('You declined the transaction.')
     }
   }
 
