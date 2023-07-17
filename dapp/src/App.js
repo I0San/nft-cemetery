@@ -6,9 +6,12 @@ import MainLayout from "./components/@layout"
 import PageHome from "./pages/home"
 import PageGraveyard from "./pages/graveyard"
 import PageFuneral from "./pages/funeral"
+import { useEffect } from "react"
 
+const network = `${process.env.REACT_APP_NETWORK}`
 
 function App() {
+  useEffect(() => { console.log('Network: ', network)}, [])
   return (
     <WagmiConfig config={config}>
       <ConnectKitCustomProvider>

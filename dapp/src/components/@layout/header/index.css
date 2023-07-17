@@ -1,9 +1,26 @@
-nav {
+.nav {
+  display: flex;
+  align-items: center;
+  z-index: 101;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 70px;
+}
+
+.nav-inner {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
 .logo {
@@ -64,10 +81,8 @@ nav {
 @media (min-width: 640px) {
 
 }
+
 @media (min-width: 768px) {
-  nav {
-    padding: 14px 24px;
-  }
   .menuItems {
     display: flex;
   }
