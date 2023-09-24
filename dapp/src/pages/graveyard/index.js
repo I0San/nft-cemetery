@@ -28,7 +28,7 @@ export default function PageGraveyard() {
       return
     }
     getGraves(page, pageSize).then((data) => {
-      if (data)
+      if (data && data[1])
         setTotalGraves(parseInt(data[1].toString()))
         setGraves([...graves, ...data[0]])
         setPage(page + 1)
