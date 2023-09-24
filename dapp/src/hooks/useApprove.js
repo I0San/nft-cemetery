@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { usePublicClient } from "wagmi"
 import { walletClient } from "../components/web3/walletClient"
+import { waitForTransaction } from '@wagmi/core'
 
 const contractAddress = `${process.env.REACT_APP_NFTCEMETERY_CONTRACT}`
 const ApproveAbi = [
@@ -25,7 +25,6 @@ const ApproveAbi = [
 ]
 
 export const useApprove = () => {
-    const publicClient = usePublicClient()
     const [result, setResult] = useState([false])
 
     const approve = async (nftAddress, tokenId) => {
@@ -40,8 +39,8 @@ export const useApprove = () => {
                 args: [contractAddress, tokenId],
             })
             if (hash) {
-                const receipt = await publicClient.waitForTransactionReceipt({ hash })
-                console.log(receipt)
+                const receipt = await waitForTransaction({ hash })
+                console.log('receipt', receipt)
                 setResult([false])
                 return true
             } else {

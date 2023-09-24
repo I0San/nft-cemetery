@@ -1,8 +1,42 @@
 import { createConfig } from "wagmi"
 import { getDefaultConfig } from "connectkit"
-import { hardhat, polygon, polygonMumbai } from "wagmi/chains"
+import { hardhat, polygon } from "wagmi/chains"
 
 const network = `${process.env.REACT_APP_NETWORK}`
+const alchemyId = `${process.env.REACT_APP_ALCHEMY_ID}`
+
+const polygonMumbai = {
+  id: 80001,
+  name: "Polygon Mumbai",
+  network: "maticmum",
+  nativeCurrency: {
+    name: "MATIC",
+    symbol: "MATIC",
+    decimals: 18,
+  },
+  rpcUrls: {
+    default: {
+      http: [
+        `https://polygon-mumbai.g.alchemy.com/v2/${alchemyId}`,
+      ],
+    },
+    public: {
+      http: [
+        `https://polygon-mumbai.g.alchemy.com/v2/${alchemyId}`,
+      ],
+    },
+  },
+  blockExplorers: {
+    etherscan: {
+      name: "PolygonScan",
+      url: "https://mumbai.polygonscan.com",
+    },
+    default: {
+      name: "PolygonScan",
+      url: "https://mumbai.polygonscan.com",
+    },
+  },
+}
 
 export const config = createConfig(
   getDefaultConfig({
