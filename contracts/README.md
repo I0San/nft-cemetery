@@ -36,7 +36,7 @@ npx hardhat node
 ## Deploy contracts
 
 ## Before deploy
-1. Create `.env` file in root folder or copy and check `.env.sexample`
+1. Create `.env` file in root folder or copy and check `.env.example`
 
 ### [Deploy parameters](https://github.com/wighawag/hardhat-deploy#1-hardhat-deploy)
 

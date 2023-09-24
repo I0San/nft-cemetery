@@ -1,0 +1,303 @@
+{
+  "address": "0xcECA8f33E7317e5187b4FA8A8708E5813664e987",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_nftOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_nftAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_nftId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_inscription",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_burried",
+          "type": "uint256"
+        }
+      ],
+      "name": "nftBurried",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "BURN_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "nftAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "inscription",
+          "type": "string"
+        }
+      ],
+      "name": "burryMyNFT",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "page",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pageSize",
+          "type": "uint256"
+        }
+      ],
+      "name": "getGraveyard",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "nftOwner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "nftContract",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nftId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "inscription",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "burried",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct NFTCemetery.Grave[]",
+          "name": "",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "graveyard",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "nftOwner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nftId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "inscription",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "burried",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9a51c70f3431c844de00b738538fd642f9ccbf23630b8390aad13630dd77d25c",
+  "receipt": {
+    "to": null,
+    "from": "0x8Bf0F467eC62a3090709921dCc784974f4abCaF9",
+    "contractAddress": "0xcECA8f33E7317e5187b4FA8A8708E5813664e987",
+    "transactionIndex": 0,
+    "gasUsed": "674710",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008800000000000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000002000000000000000000000000000000000000004000000000000000000001000000000000000000000000080000100000020000000000000000000000000000000000000002000040000000000000000000100000",
+    "blockHash": "0xa21a23abf4cf0ecf0fd929d871a302f9f0c299ea75d1821d90bbe4507a9f6bfe",
+    "transactionHash": "0x9a51c70f3431c844de00b738538fd642f9ccbf23630b8390aad13630dd77d25c",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 47938090,
+        "transactionHash": "0x9a51c70f3431c844de00b738538fd642f9ccbf23630b8390aad13630dd77d25c",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x0000000000000000000000008bf0f467ec62a3090709921dcc784974f4abcaf9",
+          "0x000000000000000000000000959c65b72147faf3450d8b50a0de57e72ffc5e0d"
+        ],
+        "data": "0x00000000000000000000000000000000000000000000000000e6b7a23382fa9000000000000000000000000000000000000000000000000085c70806dda052bb000000000000000000000000000000000000000000000e38e2a4b5ded35489f000000000000000000000000000000000000000000000000084e05064aa1d582b000000000000000000000000000000000000000000000e38e38b6d8106d78480",
+        "logIndex": 0,
+        "blockHash": "0xa21a23abf4cf0ecf0fd929d871a302f9f0c299ea75d1821d90bbe4507a9f6bfe"
+      }
+    ],
+    "blockNumber": 47938090,
+    "cumulativeGasUsed": "674710",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7a33b6096e099ea05066b0bd1523b99e",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_nftOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_nftAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_nftId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_inscription\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_burried\",\"type\":\"uint256\"}],\"name\":\"nftBurried\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"BURN_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"nftAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"inscription\",\"type\":\"string\"}],\"name\":\"burryMyNFT\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"page\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"pageSize\",\"type\":\"uint256\"}],\"name\":\"getGraveyard\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"nftOwner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"nftId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"inscription\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"burried\",\"type\":\"uint256\"}],\"internalType\":\"struct NFTCemetery.Grave[]\",\"name\":\"\",\"type\":\"tuple[]\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"graveyard\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"nftOwner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"nftId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"inscription\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"burried\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/NFTCemetery.sol\":\"NFTCemetery\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721 is IERC165 {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes calldata data) external;\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC721\\n     * or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must\\n     * understand this adds an external call which potentially creates a reentrancy vulnerability.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool approved) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/NFTCemetery.sol\":{\"content\":\"//SPDX-License-Identifier: UNLICENSED\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"@openzeppelin/contracts/token/ERC721/IERC721.sol\\\";\\r\\n\\r\\ncontract NFTCemetery {\\r\\n    address public constant BURN_ADDRESS = address(1);\\r\\n\\r\\n    struct Grave {\\r\\n        address nftOwner;\\r\\n        address nftContract;\\r\\n        uint256 nftId;\\r\\n        string inscription; // Inscription on a gravestone\\r\\n        uint256 burried;    // Block number when burned\\r\\n    }\\r\\n\\r\\n    Grave[] public graveyard;\\r\\n\\r\\n    event nftBurried(address indexed _nftOwner, address indexed _nftAddress, uint256 _nftId, string _inscription, uint _burried);\\r\\n\\r\\n    function burryMyNFT(address nftAddress, uint256 tokenId, string memory inscription ) public {\\r\\n        require(bytes(inscription).length <=20, \\\"Inscription is limited to 20 characters.\\\");\\r\\n        \\r\\n        IERC721(nftAddress).safeTransferFrom(msg.sender, BURN_ADDRESS, tokenId);\\r\\n\\r\\n        Grave memory newGrave = Grave({\\r\\n            nftOwner: msg.sender,\\r\\n            nftContract: nftAddress,\\r\\n            nftId: tokenId,\\r\\n            inscription: inscription,\\r\\n            burried: block.number\\r\\n        });\\r\\n        \\r\\n        graveyard.push(newGrave);\\r\\n\\r\\n        emit nftBurried(msg.sender, nftAddress, tokenId, inscription, block.number);\\r\\n    }\\r\\n\\r\\n    function getGraveyard(uint page, uint pageSize) public view returns (Grave[] memory, uint) {\\r\\n        require(page > 0, \\\"page number should be greater than 0\\\");\\r\\n        require(pageSize > 0, \\\"pageSize should be greater than 0\\\");\\r\\n\\r\\n        uint total = graveyard.length;\\r\\n        uint start = (page - 1) * pageSize;\\r\\n        uint end = start + pageSize > total ? total : start + pageSize;\\r\\n\\r\\n        Grave[] memory result = new Grave[](end - start);\\r\\n\\r\\n        for (uint i = start; i < end; i++) {\\r\\n            result[i - start] = graveyard[i];\\r\\n        }\\r\\n\\r\\n        return (result, total);\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0x348dc94ee17c194ba06def7208422680db13c762192175b3f3dddcf61b2d7d98\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610b3e806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632680193d1461005157806339b9a26314610066578063b31874f514610090578063fccc2813146100b4575b600080fd5b61006461005f3660046106c4565b6100d4565b005b61007961007436600461079d565b61030e565b604051610087929190610805565b60405180910390f35b6100a361009e3660046108b0565b6105d4565b6040516100879594939291906108c9565b6100bc600181565b6040516001600160a01b039091168152602001610087565b60148151111561013c5760405162461bcd60e51b815260206004820152602860248201527f496e736372697074696f6e206973206c696d6974656420746f203230206368616044820152673930b1ba32b9399760c11b60648201526084015b60405180910390fd5b604051632142170760e11b815233600482015260016024820152604481018390526001600160a01b038416906342842e0e90606401600060405180830381600087803b15801561018b57600080fd5b505af115801561019f573d6000803e3d6000fd5b50506040805160a0810182523381526001600160a01b03878116602083019081529282018781526060830187815243608085015260008054600181018255908052845160059091027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563810180549286166001600160a01b031993841617815596517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e564820180549190961692169190911790935590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e565830155519194508493507f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56601906102ac9082610997565b50608082015181600401555050836001600160a01b0316336001600160a01b03167f074db99628908764de164dc70bdd015172fa4dddd29dcc199cd2ca917ceb881e85854360405161030093929190610a57565b60405180910390a350505050565b6060600080841161036d5760405162461bcd60e51b8152602060048201526024808201527f70616765206e756d6265722073686f756c6420626520677265617465722074686044820152630616e20360e41b6064820152608401610133565b600083116103c75760405162461bcd60e51b815260206004820152602160248201527f7061676553697a652073686f756c642062652067726561746572207468616e206044820152600360fc1b6064820152608401610133565b6000805490846103d8600188610a96565b6103e29190610aaf565b90506000826103f18784610ac6565b11610405576104008683610ac6565b610407565b825b905060006104158383610a96565b67ffffffffffffffff81111561042d5761042d6106ae565b60405190808252806020026020018201604052801561048557816020015b6040805160a081018252600080825260208083018290529282018190526060808301526080820152825260001990920191018161044b5790505b509050825b828110156105c657600081815481106104a5576104a5610ad9565b60009182526020918290206040805160a081018252600590930290910180546001600160a01b039081168452600182015416938301939093526002830154908201526003820180549192916060840191906104ff9061090e565b80601f016020809104026020016040519081016040528092919081815260200182805461052b9061090e565b80156105785780601f1061054d57610100808354040283529160200191610578565b820191906000526020600020905b81548152906001019060200180831161055b57829003601f168201915b505050505081526020016004820154815250508285836105989190610a96565b815181106105a8576105a8610ad9565b602002602001018190525080806105be90610aef565b91505061048a565b509792965091945050505050565b600081815481106105e457600080fd5b600091825260209091206005909102018054600182015460028301546003840180546001600160a01b0394851696509290931693909290916106259061090e565b80601f01602080910402602001604051908101604052809291908181526020018280546106519061090e565b801561069e5780601f106106735761010080835404028352916020019161069e565b820191906000526020600020905b81548152906001019060200180831161068157829003601f168201915b5050505050908060040154905085565b634e487b7160e01b600052604160045260246000fd5b6000806000606084860312156106d957600080fd5b83356001600160a01b03811681146106f057600080fd5b925060208401359150604084013567ffffffffffffffff8082111561071457600080fd5b818601915086601f83011261072857600080fd5b81358181111561073a5761073a6106ae565b604051601f8201601f19908116603f01168101908382118183101715610762576107626106ae565b8160405282815289602084870101111561077b57600080fd5b8260208601602083013760006020848301015280955050505050509250925092565b600080604083850312156107b057600080fd5b50508035926020909101359150565b6000815180845260005b818110156107e5576020818501810151868301820152016107c9565b506000602082860101526020601f19601f83011685010191505092915050565b60006040808301818452808651808352606092508286019150828160051b8701016020808a0160005b8481101561089b57898403605f19018652815180516001600160a01b03908116865284820151168486015288810151898601528781015160a08987018190529061087a828801826107bf565b6080938401519790930196909652509583019593509082019060010161082e565b50509690960196909652509295945050505050565b6000602082840312156108c257600080fd5b5035919050565b6001600160a01b038681168252851660208201526040810184905260a0606082018190526000906108fc908301856107bf565b90508260808301529695505050505050565b600181811c9082168061092257607f821691505b60208210810361094257634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561099257600081815260208120601f850160051c8101602086101561096f5750805b601f850160051c820191505b8181101561098e5782815560010161097b565b5050505b505050565b815167ffffffffffffffff8111156109b1576109b16106ae565b6109c5816109bf845461090e565b84610948565b602080601f8311600181146109fa57600084156109e25750858301515b600019600386901b1c1916600185901b17855561098e565b600085815260208120601f198616915b82811015610a2957888601518255948401946001909101908401610a0a565b5085821015610a475787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b838152606060208201526000610a7060608301856107bf565b9050826040830152949350505050565b634e487b7160e01b600052601160045260246000fd5b81810381811115610aa957610aa9610a80565b92915050565b8082028115828204841417610aa957610aa9610a80565b80820180821115610aa957610aa9610a80565b634e487b7160e01b600052603260045260246000fd5b600060018201610b0157610b01610a80565b506001019056fea264697066735822122085b4950cfef4f73409430934b304430f3c1a03f22f6e32ae2290d9c5abb4a00064736f6c63430008120033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632680193d1461005157806339b9a26314610066578063b31874f514610090578063fccc2813146100b4575b600080fd5b61006461005f3660046106c4565b6100d4565b005b61007961007436600461079d565b61030e565b604051610087929190610805565b60405180910390f35b6100a361009e3660046108b0565b6105d4565b6040516100879594939291906108c9565b6100bc600181565b6040516001600160a01b039091168152602001610087565b60148151111561013c5760405162461bcd60e51b815260206004820152602860248201527f496e736372697074696f6e206973206c696d6974656420746f203230206368616044820152673930b1ba32b9399760c11b60648201526084015b60405180910390fd5b604051632142170760e11b815233600482015260016024820152604481018390526001600160a01b038416906342842e0e90606401600060405180830381600087803b15801561018b57600080fd5b505af115801561019f573d6000803e3d6000fd5b50506040805160a0810182523381526001600160a01b03878116602083019081529282018781526060830187815243608085015260008054600181018255908052845160059091027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563810180549286166001600160a01b031993841617815596517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e564820180549190961692169190911790935590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e565830155519194508493507f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56601906102ac9082610997565b50608082015181600401555050836001600160a01b0316336001600160a01b03167f074db99628908764de164dc70bdd015172fa4dddd29dcc199cd2ca917ceb881e85854360405161030093929190610a57565b60405180910390a350505050565b6060600080841161036d5760405162461bcd60e51b8152602060048201526024808201527f70616765206e756d6265722073686f756c6420626520677265617465722074686044820152630616e20360e41b6064820152608401610133565b600083116103c75760405162461bcd60e51b815260206004820152602160248201527f7061676553697a652073686f756c642062652067726561746572207468616e206044820152600360fc1b6064820152608401610133565b6000805490846103d8600188610a96565b6103e29190610aaf565b90506000826103f18784610ac6565b11610405576104008683610ac6565b610407565b825b905060006104158383610a96565b67ffffffffffffffff81111561042d5761042d6106ae565b60405190808252806020026020018201604052801561048557816020015b6040805160a081018252600080825260208083018290529282018190526060808301526080820152825260001990920191018161044b5790505b509050825b828110156105c657600081815481106104a5576104a5610ad9565b60009182526020918290206040805160a081018252600590930290910180546001600160a01b039081168452600182015416938301939093526002830154908201526003820180549192916060840191906104ff9061090e565b80601f016020809104026020016040519081016040528092919081815260200182805461052b9061090e565b80156105785780601f1061054d57610100808354040283529160200191610578565b820191906000526020600020905b81548152906001019060200180831161055b57829003601f168201915b505050505081526020016004820154815250508285836105989190610a96565b815181106105a8576105a8610ad9565b602002602001018190525080806105be90610aef565b91505061048a565b509792965091945050505050565b600081815481106105e457600080fd5b600091825260209091206005909102018054600182015460028301546003840180546001600160a01b0394851696509290931693909290916106259061090e565b80601f01602080910402602001604051908101604052809291908181526020018280546106519061090e565b801561069e5780601f106106735761010080835404028352916020019161069e565b820191906000526020600020905b81548152906001019060200180831161068157829003601f168201915b5050505050908060040154905085565b634e487b7160e01b600052604160045260246000fd5b6000806000606084860312156106d957600080fd5b83356001600160a01b03811681146106f057600080fd5b925060208401359150604084013567ffffffffffffffff8082111561071457600080fd5b818601915086601f83011261072857600080fd5b81358181111561073a5761073a6106ae565b604051601f8201601f19908116603f01168101908382118183101715610762576107626106ae565b8160405282815289602084870101111561077b57600080fd5b8260208601602083013760006020848301015280955050505050509250925092565b600080604083850312156107b057600080fd5b50508035926020909101359150565b6000815180845260005b818110156107e5576020818501810151868301820152016107c9565b506000602082860101526020601f19601f83011685010191505092915050565b60006040808301818452808651808352606092508286019150828160051b8701016020808a0160005b8481101561089b57898403605f19018652815180516001600160a01b03908116865284820151168486015288810151898601528781015160a08987018190529061087a828801826107bf565b6080938401519790930196909652509583019593509082019060010161082e565b50509690960196909652509295945050505050565b6000602082840312156108c257600080fd5b5035919050565b6001600160a01b038681168252851660208201526040810184905260a0606082018190526000906108fc908301856107bf565b90508260808301529695505050505050565b600181811c9082168061092257607f821691505b60208210810361094257634e487b7160e01b600052602260045260246000fd5b50919050565b601f82111561099257600081815260208120601f850160051c8101602086101561096f5750805b601f850160051c820191505b8181101561098e5782815560010161097b565b5050505b505050565b815167ffffffffffffffff8111156109b1576109b16106ae565b6109c5816109bf845461090e565b84610948565b602080601f8311600181146109fa57600084156109e25750858301515b600019600386901b1c1916600185901b17855561098e565b600085815260208120601f198616915b82811015610a2957888601518255948401946001909101908401610a0a565b5085821015610a475787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b838152606060208201526000610a7060608301856107bf565b9050826040830152949350505050565b634e487b7160e01b600052601160045260246000fd5b81810381811115610aa957610aa9610a80565b92915050565b8082028115828204841417610aa957610aa9610a80565b80820180821115610aa957610aa9610a80565b634e487b7160e01b600052603260045260246000fd5b600060018201610b0157610b01610a80565b506001019056fea264697066735822122085b4950cfef4f73409430934b304430f3c1a03f22f6e32ae2290d9c5abb4a00064736f6c63430008120033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2729,
+        "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+        "label": "graveyard",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_array(t_struct(Grave)2725_storage)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Grave)2725_storage)dyn_storage": {
+        "base": "t_struct(Grave)2725_storage",
+        "encoding": "dynamic_array",
+        "label": "struct NFTCemetery.Grave[]",
+        "numberOfBytes": "32"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Grave)2725_storage": {
+        "encoding": "inplace",
+        "label": "struct NFTCemetery.Grave",
+        "members": [
+          {
+            "astId": 2716,
+            "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+            "label": "nftOwner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 2718,
+            "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+            "label": "nftContract",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 2720,
+            "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+            "label": "nftId",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 2722,
+            "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+            "label": "inscription",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 2724,
+            "contract": "contracts/NFTCemetery.sol:NFTCemetery",
+            "label": "burried",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "160"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
