@@ -35,6 +35,27 @@ npx hardhat node
 
 ## Deploy contracts
 
-```bash
-npx hardhat run scripts/deploy.js --network <network>
+## Before deploy
+1. Create `.env` file in root folder or copy and check `.env.sexample`
+
+### [Deploy parameters](https://github.com/wighawag/hardhat-deploy#1-hardhat-deploy)
+
+## Deploy on hardhat local network
+```shell
+npx hardhat deploy
+```
+
+## Deploy on Polygon Testnet, generate deployment files
+```shell
+npx hardhat deploy --write true --network polygon_testnet
+```
+
+## Deploy on Polygon Mainnet, generate deployment files
+```shell
+npx hardhat deploy --write true --network polygon_mainnet
+```
+
+## Run custom setup script
+```shell
+npx hardhat run scripts/setup.js --network <network>
 ```
