@@ -8,6 +8,10 @@ The contract creates a new Grave with the Incription (limited to 20 characters),
 
 The ReactJS dApp is a simple interface to interact with the contract. It allows you to connect your wallet, approve the contract to transfer your NFTs and then bury them. You can also see the list of all the graves and the details of each grave.
 
+![Home](screenshot-1.jpg)
+![Funeral](screenshot-2.jpg)
+![Graveyard](screenshot-3.jpg)
+
 ## AI Help
 To produce designs and mockups I used MidJourney AI and then upscaled the images with Replica's "Super Resolution" models. ChatGPT 4 was also used to help with some Solidity code.
 
