@@ -1,7 +1,7 @@
 import './index.css'
 import useBodyClass from '../../hooks/useBodyClass'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useGetGraveyard } from '../../hooks/useGetGraves'
 import { PageTransition } from '../../components/@layout/pageTransition'
 import { shortenAddress } from '../../utils/common'
@@ -12,6 +12,7 @@ const explorerUrl = `${process.env.REACT_APP_EXPLORER_URL}`
 
 export default function PageGraveyard() {
   useBodyClass('graveyard-bg')
+  const shouldFetch = useRef(true)
   const graves = useGraveyardStore((state) => state.graves)
   const totalGraves = useGraveyardStore((state) => state.totalGraves)
   const page = useGraveyardStore((state) => state.page)
@@ -21,6 +22,13 @@ export default function PageGraveyard() {
   const setPage = useGraveyardStore((state) => state.setPage)
   const [hasMore, setHasMore] = useState(true)
   const { getGraves, getGravesLoading, getGravesError } = useGetGraveyard()
+
+  useEffect(() => {
+    if (shouldFetch.current) {
+      shouldFetch.current = false
+      fetchData()
+    }
+  }, [])
 
   const fetchData = () => {
     if (page > 1 && page * pageSize >= totalGraves) { // || getGravesLoading || getGravesError || !graves?.length) {
