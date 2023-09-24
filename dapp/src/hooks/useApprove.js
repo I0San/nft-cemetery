@@ -41,6 +41,7 @@ export const useApprove = () => {
             })
             if (hash) {
                 const receipt = await publicClient.waitForTransactionReceipt({ hash })
+                console.log(receipt)
                 setResult([false])
                 return true
             } else {
