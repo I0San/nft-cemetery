@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import ReactGA from "react-ga4"
 
+const ga = `${process.env.REACT_APP_GOOGLE_ANALITICS_ID}`
+
 export default function GA() {
   const shouldInit = useRef(true)
   let location = useLocation()
@@ -9,7 +11,7 @@ export default function GA() {
   useEffect(() => {
     if (shouldInit.current) {
       shouldInit.current = false
-      ReactGA.initialize(`${process.env.REACT_APP_GOOGLE_ANALITICS_ID}`)
+      ReactGA.initialize(ga)
     }
   }, [])
 
