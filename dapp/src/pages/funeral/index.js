@@ -41,9 +41,10 @@ export default function PageFuneral() {
         if (await bury(dbTokenAddress, tkId, dbInscription)) {
           toast.success('You\'ve successfully buried your NFT.')
         }
-      } else {
-        toast.error('You declined the transaction.')
-      }
+      } 
+      // else {
+      //   toast.error('You declined the transaction.')
+      // }
     }
   }
 

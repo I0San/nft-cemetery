@@ -1,21 +1,15 @@
-const { ethers, network } = require("hardhat");
-const { utils } = require("ethers");
+const { ethers } = require("hardhat");
 const hre = require("hardhat");
-const confirmations = network.config.blockConfirmations || 1;
 
 let deployerSigner;
-
-let mockNftAddress;
-let nftCemeteryAddress;
-
 let mockNftDeployerInstance;
-let nftCemeteryDeployerInstance;
 
-function getContractAddress(contractName) {
+async function getContractAddress(contractName) {
     let contractAddress = ethers.ZeroAddress;
     try {
         let tokenInstance = await deployments.get(contractName);
         if (tokenInstance) {
+            console.log(`Contract ${contractName} found at ${tokenInstance.address}`);
             contractAddress = tokenInstance.address;
         }
     } catch (e) {}
@@ -26,14 +20,10 @@ async function init() {
     const { deployer } = await hre.getNamedAccounts();
 
     deployerSigner = await ethers.getSigner(deployer);
-    let mockNftContractName = "MockNFT";
-    let nftCemeteryContractName = "NFTCemetery";
+    const mockNftContractName = "MockNFT";
 
-    let mockNftAddress = getContractAddress(mockNftContractName);
+    let mockNftAddress = await getContractAddress(mockNftContractName);
     mockNftDeployerInstance = await ethers.getContractAt(mockNftContractName, mockNftAddress, deployerSigner);
-
-    let nftCemeteryAddress = getContractAddress(nftCemeteryContractName);
-    nftCemeteryDeployerInstance = await ethers.getContractAt(nftCemeteryContractName, nftCemeteryAddress, deployerSigner);
 }
 
 async function mockNftMint() {
@@ -41,14 +31,11 @@ async function mockNftMint() {
     await mockNftDeployerInstance.mint(deployerSigner.address);
     await mockNftDeployerInstance.mint(deployerSigner.address);
     await mockNftDeployerInstance.mint(deployerSigner.address);
-    // await mockNftDeployerInstance.mint(deployerSigner.address);
-    // await mockNftDeployerInstance.mint(deployerSigner.address);
     console.log("Done.");
 }
 
 async function main() {    
     await init();
-
     mockNftMint();
 }
 
