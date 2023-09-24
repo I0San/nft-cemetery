@@ -7,14 +7,19 @@ import PageHome from "./pages/home"
 import PageGraveyard from "./pages/graveyard"
 import PageFuneral from "./pages/funeral"
 import { useEffect } from "react"
+import GA from "./components/ga"
 
 const network = `${process.env.REACT_APP_NETWORK}`
 
 function App() {
-  useEffect(() => { console.log('Network: ', network)}, [])
+  useEffect(() => { 
+    console.log(`v${process.env.REACT_APP_VERSION}`)
+    console.log('Network: ', network)
+  }, [])
   return (
     <WagmiConfig config={config}>
       <ConnectKitCustomProvider>
+        <GA />
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<PageHome />} />
