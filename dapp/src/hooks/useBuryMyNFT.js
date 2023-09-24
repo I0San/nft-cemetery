@@ -1,12 +1,11 @@
 import { useState } from "react"
-import { usePublicClient } from "wagmi"
 import { walletClient } from "../components/web3/walletClient"
 import contractABI from '../components/web3/NFTCemeteryABI.json'
+import { waitForTransaction } from '@wagmi/core'
 
 const contractAddress = `${process.env.REACT_APP_NFTCEMETERY_CONTRACT}`
 
 export const useBuryMyNFT = () => {
-    const publicClient = usePublicClient()
     const [result, setResult] = useState([false])
 
     const bury = async (nftAddress, tokenId, inscription) => {
@@ -21,7 +20,8 @@ export const useBuryMyNFT = () => {
                 args: [nftAddress, tokenId, inscription],
             })
             if (hash) {
-                const receipt = await publicClient.waitForTransactionReceipt({ hash })
+                const receipt = await waitForTransaction({ hash })
+                console.log(receipt)
                 setResult([false])
                 return true
             } else {
