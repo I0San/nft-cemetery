@@ -26,7 +26,7 @@ describe("NFT Cemetery tests", function () {
         // Mock values for the transfer
         const nftContract = MockNFTContractAddress;
         const nftId = 0;
-        const inscription = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        const inscription = "AAAAAAAAAAAAAAAAAAA";
 
         // Approve
         await MockNFTContract.connect(owner).approve(NFTCemeteryContractAddress, nftId);
