@@ -3,19 +3,18 @@ async function main() {
 
     console.log("Deploying contracts with the account:", deployer.address);
 
-    const mockNFT = await ethers.deployContract("MockNFT");
-    console.log("MockNFT address:", await mockNFT.getAddress());
-
     const nFTCemetery = await ethers.deployContract("NFTCemetery");
     console.log("NFTCemetery address:", await nFTCemetery.getAddress());
 
-    // Mint MockNFTs
+    // MockNFTs
+    const mockNFT = await ethers.deployContract("MockNFT");
+    console.log("MockNFT address:", await mockNFT.getAddress());
     console.log("Minting MockNFTs...");
     await mockNFT.mint(deployer.address);
     await mockNFT.mint(deployer.address);
     await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
-    await mockNFT.mint(deployer.address);
+    // await mockNFT.mint(deployer.address);
+    // await mockNFT.mint(deployer.address);
     console.log("Done.");
 }
 
