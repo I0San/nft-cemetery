@@ -25,7 +25,7 @@ h1 {
 }
 
 .home-bg {
-  background: url("../../public/img/cemetary-bg-x2.jpg") no-repeat center center
+  background: url("/img/cemetary-bg-x2.jpg") no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -34,7 +34,7 @@ h1 {
 }
 
 .graveyard-bg {
-  background: url("../../public/img/graverayd-bg-x2.jpg") no-repeat center
+  background: url("/img/graverayd-bg-x2.jpg") no-repeat center
     center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -43,7 +43,7 @@ h1 {
 }
 
 .funeral-bg {
-  background: url("../../public/img/funeral-bg-x2.jpg") no-repeat center center
+  background: url("/img/funeral-bg-x2.jpg") no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

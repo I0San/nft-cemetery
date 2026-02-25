@@ -7,7 +7,7 @@ import { PageTransition } from '../../components/@layout/pageTransition'
 import { shortenAddress } from '../../utils/common'
 import { useGraveyardStore } from '../../store'
 
-const explorerUrl = `${process.env.REACT_APP_EXPLORER_URL}`
+const explorerUrl = `${import.meta.env.VITE_EXPLORER_URL}`
 
 
 export default function PageGraveyard() {
