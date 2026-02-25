@@ -33,6 +33,8 @@ If you want to contribute code, get in touch with me on iosan@protonmail.com.
 
 ### Donate
 
+### Testing AI Agent to generate docs for this repo
+- spinAI
 EVM Address 0x386A5a8b33234B5eb22dAeE45C1693c8591cB4a2
 
 BTC Address bc1qszdxp6dzrrzv6h0mnk0093k48h07j4rhvsjl9u
