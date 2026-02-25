@@ -1,6 +1,5 @@
 import './index.css'
 import { Link } from "react-router-dom"
-import { ConnectKitButton } from "connectkit"
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from 'react'
 
@@ -23,7 +22,7 @@ export default function Header() {
                     <Link to="/graveyard" className={active == "/graveyard" ? "linkActiveG" : ""}>Graveyard</Link>
                 </div>
                 <div>
-                    <ConnectKitButton />
+                    <appkit-button />
                 </div>
             </div>
         </nav>

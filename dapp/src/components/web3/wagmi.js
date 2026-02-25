@@ -1,56 +1,45 @@
-import { createConfig } from "wagmi"
-import { getDefaultConfig } from "connectkit"
-import { hardhat, polygon } from "wagmi/chains"
+import { createAppKit } from '@reown/appkit/react'
+import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
+import { hardhat, polygon, polygonAmoy } from '@reown/appkit/networks'
 
-const network = `${process.env.REACT_APP_NETWORK}`
-const alchemyId = `${process.env.REACT_APP_ALCHEMY_ID}`
+const network = `${import.meta.env.VITE_NETWORK}`
+const projectId = `${import.meta.env.VITE_WALLETCONNECT_PROJECT_ID}`
 
-const polygonMumbai = {
-  id: 80001,
-  name: "Polygon Mumbai",
-  network: "maticmum",
-  nativeCurrency: {
-    name: "MATIC",
-    symbol: "MATIC",
-    decimals: 18,
-  },
-  rpcUrls: {
-    default: {
-      http: [
-        `https://polygon-mumbai.g.alchemy.com/v2/${alchemyId}`,
-      ],
-    },
-    public: {
-      http: [
-        `https://polygon-mumbai.g.alchemy.com/v2/${alchemyId}`,
-      ],
-    },
-  },
-  blockExplorers: {
-    etherscan: {
-      name: "PolygonScan",
-      url: "https://mumbai.polygonscan.com",
-    },
-    default: {
-      name: "PolygonScan",
-      url: "https://mumbai.polygonscan.com",
-    },
-  },
+const getNetwork = () => {
+  if (network === 'Hardhat') return hardhat
+  if (network === 'Mumbai') return polygonAmoy
+  return polygon
 }
 
-export const config = createConfig(
-  getDefaultConfig({
-    appName: "NFT Cemetery",
-    chains: [network === 'Hardhat'
-      ? hardhat
-      : network === 'Mumbai'
-        ? polygonMumbai
-        : polygon],
-    autoConnect: true,
-    walletConnectProjectId: `${process.env.REACT_APP_WALLETCONNECT_PROJECT_ID}`,
-    // Optional
-    appDescription: "NFT Cemetery | Put your NFT's to final rest.",
-    // appUrl: "https://family.co", // app's url
-    // appIcon: "https://family.co/logo.png", // app's icon, max 1024x1024px & max. 1MB
-  }),
-)
+const networks = [getNetwork()]
+
+const metadata = {
+  name: 'NFT Cemetery',
+  description: "NFT Cemetery | Put your NFT's to final rest.",
+  url: `${import.meta.env.VITE_APP_URL}`,
+  icons: ['https://nft-cemetery.vercel.app/icons/apple-touch-icon.png']
+}
+
+export const wagmiAdapter = new WagmiAdapter({
+  networks,
+  projectId,
+  ssr: false
+})
+
+createAppKit({
+  adapters: [wagmiAdapter],
+  networks,
+  projectId,
+  metadata,
+  features: {
+    analytics: true
+  },
+  themeVariables: {
+    '--w3m-color-mix': '#20202d',
+    '--w3m-color-mix-strength': 40,
+    '--w3m-accent': '#4f286b',
+    '--w3m-border-radius-master': '4px'
+  }
+})
+
+export const config = wagmiAdapter.wagmiConfig

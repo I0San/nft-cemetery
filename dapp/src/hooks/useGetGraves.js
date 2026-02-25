@@ -3,7 +3,7 @@ import { getContract } from "viem"
 import { usePublicClient } from "wagmi"
 import contractABI from '../components/web3/NFTCemeteryABI.json'
 
-const contractAddress = `${process.env.REACT_APP_NFTCEMETERY_CONTRACT}`
+const contractAddress = `${import.meta.env.VITE_NFTCEMETERY_CONTRACT}`
 
 export const useGetGraveyard = () => {
   const publicClient = usePublicClient()
@@ -16,7 +16,7 @@ export const useGetGraveyard = () => {
       const contract = getContract({
         address: contractAddress,
         abi: contractABI,
-        publicClient,
+        client: publicClient,
       })
       const data = await contract.read.getGraveyard([page, pageSize])
       console.log(data)
