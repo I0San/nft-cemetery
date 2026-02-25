@@ -1,5 +1,5 @@
 import './index.css'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDebounce } from 'use-debounce'
 import { useAccount } from 'wagmi'
 import { toast } from 'react-hot-toast'
@@ -36,7 +36,7 @@ export default function PageFuneral() {
       toast.error('Token ID must be a number.')
     }
 
-    if (tkId !== NaN && isAddress(dbTokenAddress)) {
+    if (!Number.isNaN(tkId) && isAddress(dbTokenAddress)) {
       if (await approve(dbTokenAddress, tkId)) {
         if (await bury(dbTokenAddress, tkId, dbInscription)) {
           toast.success('You\'ve successfully buried your NFT.')
